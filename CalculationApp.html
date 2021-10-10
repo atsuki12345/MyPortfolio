@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="calculationapp.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        
+    </head>   
+
+    <body>   
+        <div id="caluclater" class="container pt-5 col-5">
+            <div>
+                <label class="text-light">input:  </label>
+                <input type="text" v-bind:value="text1">
+            </div>
+            <div >
+                <label class="text-light py-3">total :  </label>
+                <input type="text" v-bind:value='text2'>
+            </div>
+
+            <div class="buttons" style="width: 300px; padding-top:10px;">
+                <button class="mb-2" v-on:click="add_text('1')">1</button>
+                <button class="mb-2" v-on:click="add_text('2')">2</button>
+                <button class="mb-2" v-on:click="add_text('3')">3</button>
+                <button class="mb-2" v-on:click="add_text('4')">4</button>
+                <button class="mb-2" v-on:click="add_text('5')">5</button>
+                <button class="mb-2" v-on:click="add_text('6')">6</button>
+                <button class="mb-2" v-on:click="add_text('7')">7</button>
+                <button class="mb-2" v-on:click="add_text('8')">8</button>
+                <button class="mb-2" v-on:click="add_text('9')">9</button>
+                <button class="mb-2" v-on:click="add_text('0')">0</button>
+                <button class="mb-2" v-on:click="clear()">C</button>
+                <button class="mb-2" v-on:click="del()">AC</button>
+                <button class="mb-2" v-on:click="add_text('*')">*</button>
+                <button class="mb-2" v-on:click="add_text('/')">/</button>
+                <button class="mb-2" v-on:click="add_text('+')">+</button>
+                <button class="mb-2" v-on:click="add_text('-')">-</button>
+                <button class="mb-2" v-on:click="cal()">Enter</button>
+            </div>
+        </div>
+
+
+
+        <script src="CalculationApp.js"></script>
+    </body>
+</html>
